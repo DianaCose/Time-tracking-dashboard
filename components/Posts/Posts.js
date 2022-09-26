@@ -1,12 +1,10 @@
 import { Grid, Typography } from "@mui/material";
 import React from "react";
 import { Post } from "../Post/Post";
-import { Menu } from "../Menu/Menu";
 
 export default function Posts({ posts }) {
   return (
-    <>
-      <Typography> Time tracking dashboard </Typography>
+
       <Grid container spacing={3}>
         {posts.map((post) => {
           return (
@@ -22,6 +20,6 @@ export default function Posts({ posts }) {
           );
         })}
       </Grid>
-    </>
+
   );
 }

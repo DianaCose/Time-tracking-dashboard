@@ -1,11 +1,24 @@
-import { Container } from "@mui/material";
+import { Container, Grid } from "@mui/material";
+import { Menu } from "../components/Menu/Menu";
 import Posts from "../components/Posts/Posts";
 
 export default function Home() {
   return (
-    <Container maxWidth sx={{ height: "100vh", margin: 0, padding: 0, background:'#0f1424' }}>
-      <Posts posts={POSTS} />
-    </Container>
+    // <Container
+    //   maxWidth
+    //   sx={{ display: "flex", padding: 10 }}
+    // >
+    //   <Menu />
+    //   <Posts posts={POSTS} />
+    // </Container>
+    <Grid container spacing={2}>
+      <Grid item xs={12} sm={2}>
+        <Menu />
+      </Grid>
+      <Grid item xs={12} sm={10}>
+        <Posts posts={POSTS} />
+      </Grid>
+    </Grid>
   );
 }
 
